@@ -40,9 +40,9 @@ partVert = np.fromfile(partFileName,dtype='int32') #<-- loaded as a numpy array
 # now all processes have partition information
 
 myPart,intOffset = gp.getPartitionAndOffset(partVert,rank);
-if rank==1:
-   print "rank 1, myPart = ", myPart
-   print "rank 1, intOffset = %d"%intOffset
+if rank==2:
+   print "rank 2, myPart = ", myPart
+   print "rank 2, intOffset = %d"%intOffset
 
 # write to disk a partition map giving the global point number in order for all partitions
 
